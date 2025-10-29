@@ -93,68 +93,7 @@
 
 ---
 
-## 🛠️ **JavaScript Architecture**
 
-### **Core Classes**
-```javascript
-SmileStudioApp        // Main application controller
-├── LoadingManager    // Entrance animation
-├── ThemeManager      // Dark/Light mode toggle
-├── NavigationManager // Scroll handling & menu
-├── FormManager       // Form validation & submission
-└── ModalManager      // Modal open/close logic
-```
-
-### **Key Features**
-
-- **Performance Optimization**: Throttling and debouncing
-- **Event Delegation**: Efficient event handling
-- **LocalStorage**: Theme preference persistence
-- **WhatsApp Integration**: Direct messaging from forms
-- **Smooth Scrolling**: Active section tracking
-
----
-
-## 🎯 **Usage Examples**
-
-### **Customizing Colors**
-
-Edit `style.css`:
-```css
-:root {
-    --color-primary: #YOUR_COLOR;
-    --color-background-light: #YOUR_COLOR;
-    --color-background-dark: #YOUR_COLOR;
-}
-```
-
-### **Adding New Services**
-
-Edit `index1.html` in the Services Section:
-```html
-<div class="flex flex-col gap-3 bg-white/50 dark:bg-black/20 ...">
-    <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
-         style='background-image: url("YOUR_IMAGE_URL");'>
-    </div>
-    <div>
-        <h3 class="text-gray-900 dark:text-white text-lg font-bold">Service Name</h3>
-        <p class="text-primary text-sm font-medium">Starting from X EGP</p>
-        <p class="text-gray-500 dark:text-gray-400 text-sm">Description...</p>
-    </div>
-</div>
-```
-
-### **Updating Contact Information**
-
-Edit `master.js`:
-```javascript
-sendToWhatsApp(message) {
-    const whatsappUrl = `https://wa.me/YOUR_PHONE_NUMBER?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-}
-```
-
----
 
 ## 🔮 **Future Enhancements**
 
@@ -192,10 +131,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## 📞 **Contact**
 
 **Mahmoud Nazmy** - Senior Full Stack Developer
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://mahmoudnazmy.github.io/Portfolio/)
+<div align="center"> [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://mahmoudnazmy.github.io/Portfolio/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mahmoud-n/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MahmoudNazmy)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MahmoudNazmy) </div>
+
 
 
 ---
