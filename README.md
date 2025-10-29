@@ -12,7 +12,7 @@
 
 **Single Page Application | Fully Responsive | 5+ Sections | 4.9★ Rating**
 
-[View Demo](#) · [Report Bug](#) · [Request Feature](#)
+[View Demo](https://mahmoudnazmy.github.io/Dental-Clinic-Website/) 
 
 </div>
 
@@ -57,55 +57,6 @@
 
 ---
 
-## 🚀 **Getting Started**
-
-### **Prerequisites**
-
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Text editor (VS Code recommended)
-- Live Server extension (optional)
-
-### **Installation**
-
-1. Clone the repository
-```bash
-git clone https://github.com/MahmoudNazmy/smilestudio.git
-```
-
-2. Navigate to project directory
-```bash
-cd smilestudio
-```
-
-3. Open with Live Server or directly in browser
-```bash
-# No build process required!
-# Just open index2.html in your browser
-```
-
-### **Quick Setup**
-```bash
-# If using VS Code with Live Server extension
-code .
-# Right-click on index2.html → Open with Live Server
-```
-
----
-
-## 📂 **Project Structure**
-```
-smilestudio/
-│
-├── 📄 index2.html         # Main Arabic website
-├── 📜 master.js           # Core JavaScript functionality
-├── 🎨 style.css           # Custom CSS styles
-├── 📄 README.md           # Project documentation
-│
-└── 📁 assets/             # Images and resources (optional)
-```
-
----
-
 ## 🎨 **Design System**
 
 ### **Color Palette**
@@ -129,55 +80,6 @@ smilestudio/
 - Hover animations and transitions
 - Card-based layouts
 - Consistent spacing system
-
----
-
-## 💡 **Key Sections**
-
-### 🏠 **Hero Section**
-- Full-screen gradient background with image overlay
-- Animated trust badges (5000+ patients, 15+ years)
-- Dual CTA buttons (Book Appointment + Contact)
-- Statistics cards with icons
-
-### 🌟 **Why Choose Us**
-- 4-column feature grid
-- Icon-based highlights
-- Hover animations
-- Technology, team, sterilization, pricing focus
-
-### 🦷 **Services Section**
-- 6 main services showcased
-- High-quality service images
-- Pricing information
-- Expandable "View All Services" modal
-
-### 🔬 **Technologies**
-- 6 advanced equipment cards
-- Device specifications
-- Origin country labels
-- Hover scale effects
-
-### 👨‍⚕️ **Team Section**
-- 4 featured doctors
-- Professional photos with gradient overlays
-- Specialty badges
-- Expandable full team modal
-
-### ⭐ **Testimonials**
-- 4.9/5 average rating display
-- Detailed review breakdown
-- 9 patient testimonials with avatars
-- Verified patient badges
-- Service-specific tags
-
-### 📞 **Contact Section**
-- Animated background particles
-- Quick action cards (Phone, WhatsApp, Email)
-- Contact form with validation
-- Google Maps integration
-- Working hours display
-- Live status indicator
 
 ---
 
@@ -228,7 +130,7 @@ Edit `style.css`:
 
 ### **Adding New Services**
 
-Edit `index2.html` in the Services Section:
+Edit `index1.html` in the Services Section:
 ```html
 <div class="flex flex-col gap-3 bg-white/50 dark:bg-black/20 ...">
     <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
@@ -292,12 +194,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 **Mahmoud Nazmy** - Senior Full Stack Developer
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://mahmoudnazmy.github.io/Portfolio/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mahmoudnazmy/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mahmoud-n/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MahmoudNazmy)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@mahmoudnazmy.dev)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/mahmoudnazmy)
 
-**Project Link:** [https://github.com/MahmoudNazmy/smilestudio](https://github.com/MahmoudNazmy/smilestudio)
 
 ---
 
@@ -330,19 +229,7 @@ RTL Support: ✅ Yes
 Accessibility: WCAG 2.1 AA
 ```
 
----
 
-## 🏆 **Why This Project Stands Out**
-
-💎 **RTL-First Design** – Native Arabic experience, not just translated  
-🎨 **Modern Aesthetic** – Glassmorphism, gradients, smooth animations  
-⚡ **Performance Focused** – Vanilla JS, no frameworks, fast loading  
-📱 **Mobile Excellence** – Touch-optimized, gesture-friendly  
-♿ **Accessibility** – Semantic HTML, ARIA labels, keyboard navigation  
-🔄 **Real Integration** – WhatsApp forms, Google Maps, live features  
-🌙 **Dark Mode** – Full theme support with smooth transitions  
-
----
 
 ## ⭐ **Show Your Support**
 
@@ -350,18 +237,6 @@ Give a ⭐️ if this project helped you!
 
 ---
 
-## 📝 **Changelog**
-
-### Version 2.0.0 (2025-10-29)
-- ✨ Complete redesign with glassmorphism
-- 🌙 Added dark mode support
-- 📱 Improved mobile navigation
-- 🔄 Enhanced form handling
-- 🎨 New color scheme
-- ⚡ Performance optimizations
-
-### Version 1.0.0 (2024-XX-XX)
-- 🎉 Initial release
 
 ---
 
