@@ -1,0 +1,137 @@
+
+
+/* 1. Global Styles & Variables */
+:root {
+    --color-primary: #35e9d7;
+    --color-background-light: #f6f8f8;
+    --color-background-dark: #112120;
+    --color-card-light: #ffffff;
+    --color-card-dark: #1a2e2c;
+    --color-text-light: #0e1b1a;
+    --color-text-dark: #e7f3f2;
+    --color-border-light: #d0e7e4;
+    --color-border-dark: #2a4a46;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Manrope', 'Noto Sans Arabic', sans-serif;
+    background-color: var(--color-background-light);
+    color: var(--color-text-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* 2. Typography & Fonts */
+.nav-link {
+    @apply text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-200 font-medium;
+}
+
+.mobile-nav-link {
+    @apply block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800;
+}
+
+/* 3. Header & Navigation */
+#main-header.header-scrolled {
+    @apply shadow-lg;
+}
+
+/* 6. Testimonials Section Color Fix */
+#testimonials {
+    background-color: var(--color-card-light);
+}
+
+.dark #testimonials {
+    background-color: var(--color-card-dark);
+}
+
+#testimonials .text-primary {
+    color: var(--color-primary) !important;
+}
+
+#testimonials .bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+#testimonials .bg-surface-light {
+    background-color: var(--color-background-light);
+}
+
+.dark #testimonials .bg-surface-dark {
+    background-color: var(--color-background-dark);
+}
+
+#testimonials .text-text-light-secondary {
+    color: #648783;
+}
+
+.dark #testimonials .text-text-dark-secondary {
+    color: #a0b5b2;
+}
+
+/* 7. Dark Mode */
+.dark body {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-dark);
+}
+
+/* 8. Utility & Accessibility */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* 9. Responsive Design */
+@media (max-width: 768px) {
+    #main-header {
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+    .dark #main-header {
+        background-color: rgba(17, 33, 32, 0.95);
+    }
+}
+
+/* header {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header.-translate-y-full {
+            transform: translateY(-100%);
+        }
+
+        #section-indicator {
+            transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        #mobile-menu {
+            visibility: visible;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #mobile-menu.translate-x-full {
+            visibility: hidden;
+        }
+
+        #loading-overlay {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        #loading-overlay.opacity-0 {
+            pointer-events: none;
+        }
+
+        .nav-link.active {
+            color: theme('colors.primary.DEFAULT');
+        }
+
+        body.overflow-hidden {
+            overflow: hidden;
+        }
+
+        @media (max-width: 1023px) {
+            .container {
+                max-width: 100%;
+            }
+        } */

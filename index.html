@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>عيادة SmileStudio - ابتسامتك الجميلة تبدأ من هنا</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="عيادة SmileStudio - عيادة أسنان متخصصة في التجميل والعلاج بأحدث التقنيات العالمية. نقدم خدمات تبييض الأسنان، زراعة الأسنان، تقويم الأسنان، وابتسامة هوليود." />
+    <meta name="keywords"
+        content="عيادة أسنان, تجميل الأسنان, زراعة الأسنان, تقويم الأسنان, ابتسامة هوليود, تبييض الأسنان, طبيب أسنان, عيادة أسنان مصر" />
+    <meta name="author" content="SmileStudio Clinic" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="عيادة SmileStudio - ابتسامتك الجميلة تبدأ من هنا" />
+    <meta property="og:description" content="عيادة أسنان متخصصة في التجميل والعلاج بأحدث التقنيات العالمية" />
+    <meta property="og:image" content="https://smilestudio.com/assets/images/og-image.jpg" />
+    <meta property="og:url" content="https://smilestudio.com" />
+    <meta property="og:type" content="website" />
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans+Arabic:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#35e9d7",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#112120",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans Arabic", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+
+
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+    <!-- Loading Overlay -->
+    <div id="loading-overlay"
+        class="fixed inset-0 z-[100] flex items-center justify-center bg-background-light dark:bg-background-dark transition-opacity duration-500">
+        <div class="relative flex flex-col items-center gap-4">
+            <div class="relative">
+                <!-- Spinning Border -->
+                <div class="animate-spin rounded-full h-16 w-16 border-4 border-primary/30 border-t-primary"></div>
+                <!-- Center Logo -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="size-8 text-primary">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                fill="currentColor" fill-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500 dark:text-gray-400">جاري التحميل...</p>
+        </div>
+    </div>
+
+    <!-- Skip to Main Content (Accessibility) -->
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[110] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg focus:shadow-lg">
+        تخطي إلى المحتوى الرئيسي
+    </a>
+
+    <!-- Header -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 text-gray-900 dark:text-white">
+                    <div class="size-8 md:size-10 text-primary">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                fill="currentColor" fill-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-lg md:text-xl font-bold">SmileStudio</h1>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 hidden md:block">ابتسامة مثالية</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-1">
+                    <a href="#hero"
+                        class="nav-link px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary rounded-lg transition-colors">
+                        الرئيسية
+                    </a>
+                    <a href="#services"
+                        class="nav-link px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary rounded-lg transition-colors">
+                        خدماتنا
+                    </a>
+                    <a href="#technologies"
+                        class="nav-link px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary rounded-lg transition-colors">
+                        تقنياتنا
+                    </a>
+                    <a href="#team"
+                        class="nav-link px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary rounded-lg transition-colors">
+                        فريقنا
+                    </a>
+
+                    <a href="#testimonials"
+                        class="nav-link px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary rounded-lg transition-colors">
+                        آراء المرضى
+                    </a>
+                    <a href="#contact"
+                        class="nav-link px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary rounded-lg transition-colors">
+                        اتصل بنا
+                    </a>
+                </nav>
+
+                <!-- Right Actions -->
+                <div class="flex items-center gap-2 md:gap-4">
+                    <!-- Book Appointment Button -->
+                    <button onclick="app.modals.openModal('booking-modal')"
+                        class="hidden md:flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg transition-colors">
+                        <span class="material-symbols-outlined">calendar_today</span>
+                        <a href="#contact"> <span>احجز موعد</span>
+                        </a>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                        class="flex items-center justify-center size-10 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                        aria-label="تغيير المظهر">
+                        <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+                        <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn"
+                        class="lg:hidden flex items-center justify-center size-10 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                        aria-label="القائمة">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Active Section Indicator -->
+        <div id="section-indicator"
+            class="absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 opacity-0"
+            style="width: 0; transform: translateX(0);">
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] lg:hidden invisible">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-gray-900/50 backdrop-blur-sm opacity-0 transition-opacity duration-300"
+            onclick="app.navigation.closeMobileMenu()">
+        </div>
+
+        <!-- Menu Panel -->
+        <div class="absolute left-0 top-0 bottom-0 w-[280px] bg-white dark:bg-gray-900 shadow-xl 
+                    transform -translate-x-full transition-transform duration-300">
+            <!-- Menu Header -->
+            <div class="p-4 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="size-8 text-primary">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                                fill="currentColor" fill-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 dark:text-white">SmileStudio</h2>
+                </div>
+                <button onclick="app.navigation.closeMobileMenu()"
+                    class="size-10 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                    aria-label="إغلاق القائمة">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+
+            <!-- Menu Links -->
+            <nav class="p-4">
+                <div class="space-y-2">
+                    <a href="#hero"
+                        class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors"
+                        onclick="app.navigation.closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">home</span>
+                        الرئيسية
+                    </a>
+                    <a href="#services"
+                        class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors"
+                        onclick="app.navigation.closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">medical_services</span>
+                        خدماتنا
+                    </a>
+                    <a href="#technologies"
+                        class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors"
+                        onclick="app.navigation.closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">devices</span>
+                        تقنياتنا
+                    </a>
+                    <a href="#team"
+                        class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors"
+                        onclick="app.navigation.closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">group</span>
+                        فريقنا
+                    </a>
+
+                    <a href="#testimonials"
+                        class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors"
+                        onclick="app.navigation.closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">format_quote</span>
+                        آراء المرضى
+                    </a>
+                    <a href="#contact"
+                        class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors"
+                        onclick="app.navigation.closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">contact_support</span>
+                        اتصل بنا
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- Main Content -->
+    <main id="main-content" class="relative pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden p-4">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrxAh2qbqBuFXERhf2I7WGvQQkgMOiyzaL4iVvBwYnIOBtxChkYpvaC-7grE5E4mijNYf9f4NWSkpysSxwQhjrKaPAq6o4BF6oX9xfk6LChlqCURZ5QQ8rhrxBHUorvdi5a4y4lpPUx2dSSxsEs5Wz4I2x3svcHX8-wJC2Yi2PcOvZW-uKIeUPJAzVQH_Xjhpz27VZ16juTfn1OE6U5_LYkOcpH01Pw0w791-lpZtgn-jPiXfMEaDAp7uaYwQrmZ36SOnCF-bZBw"
+                    alt="A vibrant 3D isometric illustration of a modern dental clinic room" loading="eager" />
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-teal-900/60 to-background-dark/80">
+                </div>
+            </div>
+
+            <div
+                class="relative z-10 flex flex-col items-center justify-center text-center text-white pt-24 pb-12 w-full max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-[-0.033em] mb-4"
+                    style="text-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                    ابتسامتك الجميلة تبدأ من هنا
+                </h1>
+                <p class="text-base sm:text-lg md:text-xl font-normal leading-normal max-w-2xl mb-8"
+                    style="text-shadow: 0 2px 8px rgba(0,0,0,0.5);">
+                    عيادة أسنان متخصصة في التجميل والعلاج بأحدث التقنيات العالمية
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+                    <button onclick="document.getElementById('booking-modal').classList.remove('hidden')"
+                        class="flex min-w-[180px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105 transform-gpu">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                        <span class="truncate">احجز موعدك الآن</span>
+                    </button>
+                    <a href="#contact"
+                        class="flex min-w-[180px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl h-12 px-6 bg-white/10 text-white border border-primary text-base font-bold leading-normal tracking-[0.015em] backdrop-blur-sm hover:bg-white/20 transition-colors">
+                        <span class="material-symbols-outlined">call</span>
+                        <span class="truncate">تواصل معنا</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats Section / Trust Badges -->
+            <div class="relative z-10 w-full max-w-6xl mx-auto px-4 mt-16 sm:mt-24">
+                <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    <div
+                        class="flex flex-col gap-2 rounded-xl p-4 sm:p-6 bg-white/10 dark:bg-black/20 border border-white/20 backdrop-blur-md text-center items-center">
+                        <span class="material-symbols-outlined text-primary text-3xl">sentiment_very_satisfied</span>
+                        <p class="text-white text-2xl font-bold leading-tight">5000+</p>
+                        <p class="text-white/80 text-sm font-medium leading-normal">مريض سعيد</p>
+                    </div>
+                    <div
+                        class="flex flex-col gap-2 rounded-xl p-4 sm:p-6 bg-white/10 dark:bg-black/20 border border-white/20 backdrop-blur-md text-center items-center">
+                        <span class="material-symbols-outlined text-primary text-3xl">trophy</span>
+                        <p class="text-white text-2xl font-bold leading-tight">15+</p>
+                        <p class="text-white/80 text-sm font-medium leading-normal">سنة خبرة</p>
+                    </div>
+                    <div
+                        class="flex flex-col gap-2 rounded-xl p-4 sm:p-6 bg-white/10 dark:bg-black/20 border border-white/20 backdrop-blur-md text-center items-center">
+                        <span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+                        <p class="text-white text-2xl font-bold leading-tight">100%</p>
+                        <p class="text-white/80 text-sm font-medium leading-normal">ضمان</p>
+                    </div>
+                    <div
+                        class="flex flex-col gap-2 rounded-xl p-4 sm:p-6 bg-white/10 dark:bg-black/20 border border-white/20 backdrop-blur-md text-center items-center">
+                        <span class="material-symbols-outlined text-primary text-3xl">biotech</span>
+                        <p class="text-white text-2xl font-bold leading-tight">الأحدث</p>
+                        <p class="text-white/80 text-sm font-medium leading-normal">التقنيات</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section id="why-us" class="relative py-16 sm:py-20 md:py-24">
+            <div class="layout-container flex h-full grow flex-col w-full">
+                <div class="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-20 flex flex-1 justify-center">
+                    <div class="layout-content-container flex flex-col max-w-7xl flex-1 items-center">
+                        <h2
+                            class="text-gray-900 dark:text-white tracking-tight text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-center pb-3 pt-6">
+                            لماذا عيادة SmileStudio هي الخيار الأمثل؟
+                        </h2>
+                        <p
+                            class="text-gray-600 dark:text-gray-300 text-lg sm:text-xl font-normal leading-normal pb-10 sm:pb-12 md:pb-16 text-center max-w-3xl">
+                            نجمع بين الخبرة والتكنولوجيا والرعاية الشخصية لتقديم أفضل ابتسامة لك
+                        </p>
+
+                        <!-- Features Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full">
+                            <!-- Technology Feature -->
+                            <div
+                                class="flex flex-1 flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-700/50 bg-white/50 dark:bg-gray-800/30 p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 dark:hover:shadow-primary/10 hover:-translate-y-2">
+                                <span class="material-symbols-outlined text-primary text-4xl">devices</span>
+                                <div class="flex flex-col gap-1">
+                                    <h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">أحدث
+                                        التقنيات العالمية</h3>
+                                    <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">
+                                        استخدام أحدث الأجهزة وتصميم الابتسامة الرقمي لنتائج دقيقة ومبهرة.</p>
+                                </div>
+                            </div>
+
+                            <!-- Expert Team Feature -->
+                            <div
+                                class="flex flex-1 flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-700/50 bg-white/50 dark:bg-gray-800/30 p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 dark:hover:shadow-primary/10 hover:-translate-y-2">
+                                <span class="material-symbols-outlined text-primary text-4xl">groups</span>
+                                <div class="flex flex-col gap-1">
+                                    <h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">فريق طبي
+                                        متخصص</h3>
+                                    <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">أطباء
+                                        معتمدون بتدريب دولي وعضويات مرموقة في طب الأسنان التجميلي.</p>
+                                </div>
+                            </div>
+
+                            <!-- Sterilization Feature -->
+                            <div
+                                class="flex flex-1 flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-700/50 bg-white/50 dark:bg-gray-800/30 p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 dark:hover:shadow-primary/10 hover:-translate-y-2">
+                                <span class="material-symbols-outlined text-primary text-4xl">health_and_safety</span>
+                                <div class="flex flex-col gap-1">
+                                    <h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">تعقيم فائق
+                                        المستوى</h3>
+                                    <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">
+                                        التزام صارم بمعايير منظمة الصحة العالمية للسلامة والنظافة.</p>
+                                </div>
+                            </div>
+
+                            <!-- Competitive Pricing Feature -->
+                            <div
+                                class="flex flex-1 flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-700/50 bg-white/50 dark:bg-gray-800/30 p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 dark:hover:shadow-primary/10 hover:-translate-y-2">
+                                <span class="material-symbols-outlined text-primary text-4xl">sell</span>
+                                <div class="flex flex-col gap-1">
+                                    <h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight">أسعار
+                                        تنافسية</h3>
+                                    <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">خطط
+                                        سداد ميسرة وباقات متنوعة تناسب جميع الميزانيات.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="bg-gray-50 dark:bg-background-dark/50 py-16 sm:py-20">
+            <div class="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-20 flex flex-1 justify-center">
+                <div class="layout-content-container flex flex-col max-w-7xl flex-1">
+                    <h2
+                        class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white leading-tight tracking-tight text-center mb-4">
+                        خدماتنا الطبية المتكاملة</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg text-center max-w-2xl mx-auto mb-12">نقدم جميع
+                        تخصصات طب الأسنان تحت سقف واحد باستخدام أحدث التقنيات العالمية</p>
+
+                    <!-- Services Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                        <!-- تبييض الأسنان -->
+                        <div
+                            class="flex flex-col gap-3 bg-white/50 dark:bg-black/20 backdrop-blur-sm border border-white/20 dark:border-black/30 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-primary/50">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASL7D11lIsEQYYqSkIGkNSzxegVTlGi3BvA2pIN40hl5LXNIVKURd7_Qjk1zO-YsgMVstBNNpxI6rtCkMyNUdtTfwjhxa2CiaOOxHOe_oWUgin8fQigDZZq6DBOk3Kw9wyDyxfSvW7EYVarQ3-Es8OQP0x0pOu-yg42PtJi_Z3rsFQP0--xb66XX9f3LZ5Q7rOtii7pF3Ck6bImA8uqrBvMoetH7Ct6RhocIlsv3P9ari4-Aqf5-Bxp_0y8mldvaiTqaKU3ukw4BDg");'>
+                            </div>
+                            <div>
+                                <h3 class="text-gray-900 dark:text-white text-lg font-bold leading-normal">تبييض الأسنان
+                                    بالليزر</h3>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1">
+                                    تبييض فوري في جلسة واحدة. نتائج تدوم حتى 3 سنوات.</p>
+                                <p class="text-primary text-sm font-semibold leading-normal mt-2">ابتداءً من 2,500 ج.م
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- زراعة الأسنان -->
+                        <div
+                            class="flex flex-col gap-3 bg-white/50 dark:bg-black/20 backdrop-blur-sm border border-white/20 dark:border-black/30 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-primary/50">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCL3BRh78-7qyny-vwZ1EEB4qv7_M6Fz6qSInVQnFo8X5lqVY9P-c94t1l6OiPX8LeaLxmMbVvE59VMbB6_uhvJQEjaq9ZrHR08GKIeyXpZS86AMatvugLfgbsAaLPZPBOvQu8MgNoLzkmjwiIgFdb4d15f0UV2G3hDV4mf2-3ZAc_-8jQzIZK2aYCoHTSGK7xFv_E5vUh4hULUQewZAI-q8cYDAOLWdDxJIeLqjJf6e8fGmE4fJJhAkW6mW0E_msCU2YxJUhEKdNKm");'>
+                            </div>
+                            <div>
+                                <h3 class="text-gray-900 dark:text-white text-lg font-bold leading-normal">زراعة الأسنان
+                                    الفورية</h3>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1">
+                                    زراعة ألمانية أو سويسرية. نسبة نجاح 98.5٪.</p>
+                                <p class="text-primary text-sm font-semibold leading-normal mt-2">12,000 - 18,000 ج.م
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- تقويم الأسنان -->
+                        <div
+                            class="flex flex-col gap-3 bg-white/50 dark:bg-black/20 backdrop-blur-sm border border-white/20 dark:border-black/30 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-primary/50">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZmv5Ahqj0ieyQW37a4LBDOGIMFk1n4Z39oktuFpeV3AxuNBcMDTzHQK1wZMoAekZElVgesusW_KMcwO8iYGdjTsoVOu7AwMhnfoEg3lsfsXxOgYuqtQRD69V0fyWDBvVPqjCxOErZfBBemNMLTppUP6LLkrnny_wmpqMSH_y4FKtzi7MPLuROXrTeB_ihBagRGruD5Yeym5PpFuVNcc3Ik6mm46b8YNtEltvsicoiuA83rBXQxq_wGnvzRpHN3LTY3mm6d7mlwJ_-");'>
+                            </div>
+                            <div>
+                                <h3 class="text-gray-900 dark:text-white text-lg font-bold leading-normal">تقويم الأسنان
+                                    الشفاف</h3>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1">غير
+                                    مرئي وقابل للإزالة. نتائج في 6-18 شهر.</p>
+                                <p class="text-primary text-sm font-semibold leading-normal mt-2">تقسيط حتى 24 شهر</p>
+                            </div>
+                        </div>
+
+                        <!-- ابتسامة هوليود -->
+                        <div
+                            class="flex flex-col gap-3 bg-white/50 dark:bg-black/20 backdrop-blur-sm border border-white/20 dark:border-black/30 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-primary/50">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-N_Es2wVBSloW6WvJlKa5e_ahQLTqBI5j6rrWpk8DI4jXfY1qH8YKT9P2WCxOo9WQF3hsjx1DabnfB1DgqWQ1CzIrqK6mEjZNl6RwxYSRZdzqkja1t-xjfSwxJ3zX2bv11j8Roacdm3jRSrQrSXkphEikT2rrWImq9EveNKXrG_4tZAORyHkemij9kwCS7iQ495o6R4qecEk0FgF9vyN9gPnKg9RpAdz2QtlsaMqIsYdTCgt0_DtyPaFGbotRason3Rzvmhcnptil");'>
+                            </div>
+                            <div>
+                                <h3 class="text-gray-900 dark:text-white text-lg font-bold leading-normal">ابتسامة
+                                    هوليود</h3>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1">
+                                    تصميم ابتسامة رقمي 3D. نتائج فورية ودائمة.</p>
+                                <p class="text-primary text-sm font-semibold leading-normal mt-2">55,000 - 85,000 ج.م
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- علاج جذور -->
+                        <div
+                            class="flex flex-col gap-3 bg-white/50 dark:bg-black/20 backdrop-blur-sm border border-white/20 dark:border-black/30 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-primary/50">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJ3zH7mb-Eub3hJBF2sGTJgHbbfUvO874Jf9JceLiiHe8D9kgZs8k3dXXuGnvmayDqRkpz3MfVfD9bu71hThZ7NEw548xIDICFmkZQRSGdm11s5g3OwnuME1SwS67LdyYyilPTmNx9UMNDuD0Jn5b4nNYQzpyteCMRxsA6JdE5ODQoOxevKmzISwQ-BwQy-LDJB8KADDmbx5R5iMtdkDmIoKp79iFj7Vlg5SVfM_FSJPxVbpnQKGZHBVHFuLt3P-DR4Z4jB6MyVcRz");'>
+                            </div>
+                            <div>
+                                <h3 class="text-gray-900 dark:text-white text-lg font-bold leading-normal">علاج الجذور
+                                    بالميكروسكوب</h3>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1">دقة
+                                    عالية 20 ضعف. جلسة واحدة أو جلستين.</p>
+                                <p class="text-primary text-sm font-semibold leading-normal mt-2">نسبة نجاح 95٪</p>
+                            </div>
+                        </div>
+
+                        <!-- تنظيف الأسنان -->
+                        <div
+                            class="flex flex-col gap-3 bg-white/50 dark:bg-black/20 backdrop-blur-sm border border-white/20 dark:border-black/30 rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-primary/50">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATpBw86KcRgw0HRfd-Ve6swccv1nYqNtddwfRvB0UwKVDG3GLrkra8107-GyOfUkUS5GIzyckQ8Gy1-eRQGmfF6-OyiZUGuxGXbRDu77BENJ4mEm41usn_2gY9guO-YkHG5ueDI2m6JVprdUV6tQC8YpvsxXttEISoIQ-WD5VnghgRiLhFz_4AMjYJTr8fsMQ1N1Szn_GolUIDJeuHigx62pWXtm6D3fb3sf-CLFaeYROdSjG3nz6fMfjdcJSnlB7r-ks1m-p9Hs6-");'>
+                            </div>
+                            <div>
+                                <h3 class="text-gray-900 dark:text-white text-lg font-bold leading-normal">تنظيف وتلميع
+                                    الأسنان</h3>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1">
+                                    إزالة الجير والتكلسات. فحص شامل مجاني.</p>
+                                <p class="text-primary text-sm font-semibold leading-normal mt-2">399 ج.م فقط</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- View All Services Button -->
+                    <div class="flex justify-center mt-12">
+                        <button onclick="document.getElementById('all-services-modal').classList.remove('hidden')"
+                            class="flex min-w-[180px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+                            <span class="material-symbols-outlined">add</span>
+                            <span class="truncate">عرض كل الخدمات</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Technologies Section -->
+        <section id="technologies" class="py-16 sm:py-20">
+            <div class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-10 sm:py-16 md:py-20">
+                <div class="layout-content-container flex flex-col max-w-5xl flex-1 gap-12">
+                    <!-- Section Header -->
+                    <div class="flex flex-col items-center text-center gap-4">
+                        <div
+                            class="flex items-center justify-center w-20 h-20 rounded-full bg-primary/20 text-primary mb-4">
+                            <span class="material-symbols-outlined !text-4xl">neurology</span>
+                        </div>
+                        <h2
+                            class="text-[#0e1b1a] dark:text-white text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+                            نستخدم أحدث التقنيات العالمية</h2>
+                        <p
+                            class="text-slate-600 dark:text-slate-300 text-lg sm:text-xl font-normal leading-normal max-w-2xl">
+                            استثمارنا في التكنولوجيا = استثمار في صحتك</p>
+                    </div>
+
+                    <!-- Technologies Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                        <!-- Digital X-Ray -->
+                        <div
+                            class="flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-background-dark/50 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEVHRcG8xXHG39TBsT2o8gqIMNCfTt_IIhUqLnXX_F4FtfPgqqUPu6pC7mOLEdVQBdy7db7kJFKzy7MnBXhxp5E9H-TKVhsgIxVFOzI3N5RjD0BcJgLslYbO-Z5_-uRdCPFXxH5PP_7LgOG5nBlsVyJ9DoLIMGKzMQr03n3SViZBwR_yBTqglLDdcAT1yPhUYHUHtt8xwUqqYGbXmG-PYAEGeXtTnfziU_XoTHnR6mEhcZ5rq8vnP5wx6SgpxvxTT2RRjxDTZkRMLO");'>
+                            </div>
+                            <div>
+                                <h3 class="text-[#0e1b1a] dark:text-white text-lg font-bold leading-tight">جهاز الأشعة
+                                    الرقمية البانورامية</h3>
+                                <p class="text-primary text-sm font-medium pt-1">Planmeca ProMax 3D - فنلندا</p>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed mt-2">
+                                    90% أقل إشعاعاً, صورة فورية بجودة عالية, تصوير ثلاثي الأبعاد CT.</p>
+                            </div>
+                        </div>
+
+                        <!-- Intraoral Scanner -->
+                        <div
+                            class="flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-background-dark/50 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDweK0avzNylp7r47lZImoBn7_IpuFdkndMl2vExC9qPWIRgiSy9SuVVCcGHNq8XiRWDYQrm2vgnGLfWtATratHhXJbCCDsYx-QoMM_5QYeaCHJ4JG0oVNicHMD49kRWdjECOb6SrF-BVcfBNJCEmC2qYM6Rc_vE7HBYp2LkrcF6NVzpltYmr8wv-0gWBmx_ohgFHuGngnOOE-OdHW2ZMQfYZybNGwm81qZizx5yy0MqY7180LwPVBVTYvHySybxNVezGAO9vkzMyXF");'>
+                            </div>
+                            <div>
+                                <h3 class="text-[#0e1b1a] dark:text-white text-lg font-bold leading-tight">ماسح ضوئي
+                                    داخل الفم</h3>
+                                <p class="text-primary text-sm font-medium pt-1">iTero Element 5D - أمريكا</p>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed mt-2">
+                                    دقة تصل إلى 6 ميكرون, مسح كامل في 5 دقائق.</p>
+                            </div>
+                        </div>
+
+                        <!-- CAD/CAM System -->
+                        <div
+                            class="flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-background-dark/50 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAupY-NQ67dzYOF-pfDfzBMp1RfjbcKf8VDj6wIj1dbWZTThCnyMtX0fr_0VRno4Sbkuus9AoHQbVEBuU7jO7sJGuShg_TvZGTh-nnCJSMjknlufw_xNLCCQrQ9eta_aZDjB78PTb7ml611vJOGweuqflOvhBSb527u5QB15v0Ix4BATFsAGfB9O1OicMoVfoUbE2g7PJgh-bESBHM5-jF0qP67zFvmo8w5VoH8RiJt3C-jWaFBbaxlm3OorVNYO_3ny4MFax7PavL");'>
+                            </div>
+                            <div>
+                                <h3 class="text-[#0e1b1a] dark:text-white text-lg font-bold leading-tight">نظام CAD/CAM
+                                    للتصميم والتصنيع</h3>
+                                <p class="text-primary text-sm font-medium pt-1">CEREC Primescan - ألمانيا</p>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed mt-2">
+                                    تصنيع في العيادة نفس اليوم, دقة ومطابقة مثالية.</p>
+                            </div>
+                        </div>
+
+                        <!-- Dental Laser -->
+                        <div
+                            class="flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-background-dark/50 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7UveTkCcunL90ssvM3ofdMTShGw_I8Hg7vuGfxkUtCFB1cLd94XX3FODR_8_rifqVPowHlTK_9lIiYS-bwtn5Nsr2XIWt3_lvpu5H4e1BJnevmt_q_qJBLFYsyKC2SMGrfy4Vxf5qS-USczC9KFF_I1vp89f3rIz7s_qcbPvlczGzDx39_DixXJRvyTY7Fhn-E_dXeHGZlcahheVmlSzDw3bfxtXYzTcD9oL0fVkecTyaXUiDaGsqklubW55cVouK_3UGfSYJEp4I");'>
+                            </div>
+                            <div>
+                                <h3 class="text-[#0e1b1a] dark:text-white text-lg font-bold leading-tight">ليزر طب
+                                    الأسنان</h3>
+                                <p class="text-primary text-sm font-medium pt-1">Waterlase iPlus - أمريكا</p>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed mt-2">
+                                    بدون ألم, التئام أسرع للأنسجة, تعقيم ذاتي.</p>
+                            </div>
+                        </div>
+
+                        <!-- Smart Dental Chair -->
+                        <div
+                            class="flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-background-dark/50 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDan7qWI5vtBVgy7v2PMAMRjg-GbmxV6xW2d-V2CJmSF_4pQ5L8sEKBkM95HFOGtoFFo8HL8Wl0cXFucMgen1qg91u4ZhYB9y0DbyPSOLejLKtet7dZ-Q00hmJsBTe5kTAGufjfB3Mg0PW4I7kER3_-bvwXdbJ3a7mA1C8vgV2Lq1-E-ycqT6KBS9HFZADePfGniCPzEFyUsgw-wYBNn5U0t_tsds1HfFfnrzVIIShpEfQvtp_VmKg_ImQ4Mm7A05v42EGWehqAYqZd");'>
+                            </div>
+                            <div>
+                                <h3 class="text-[#0e1b1a] dark:text-white text-lg font-bold leading-tight">كرسي الأسنان
+                                    الذكي</h3>
+                                <p class="text-primary text-sm font-medium pt-1">A-dec 500 - أمريكا</p>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed mt-2">
+                                    وظيفة مساج للاسترخاء, شاشة ترفيه فردية.</p>
+                            </div>
+                        </div>
+
+                        <!-- Sterilization System -->
+                        <div
+                            class="flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-background-dark/50 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                            <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_lQ9_zaQot0UXFp_6qAQuRdG4yJUPTDxVKZeCpPAOPrs9Xfoqcze357VqrdM9sbjMb8-9NjJs9uZfZXOfncwyBpGCx4nq7qmE6IoQNMyYV2brjH4qT9jc6RWEFiASZB5MrrNTGoX--VKd5X2wUjSo1-l8G32wVHDxqf6_Qw0bmN1Ch58u2LCEKfQp7Zq5Zg54E6ZgzjY9VlkMlGr-sjHDxjCyyNZ4N_R6ge7pO1Bl2Fv4zl7iMiiyABRdiZqFwzCelYiYENeapGZc");'>
+                            </div>
+                            <div>
+                                <h3 class="text-[#0e1b1a] dark:text-white text-lg font-bold leading-tight">نظام التعقيم
+                                    المتطور</h3>
+                                <p class="text-primary text-sm font-medium pt-1">Melag Vacuklav - ألمانيا</p>
+                                <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-relaxed mt-2">
+                                    تعقيم بالبخار 134 درجة, شهادة تعقيم لكل دورة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team Section -->
+        <section id="team" class="py-16 sm:py-20 bg-gray-50 dark:bg-background-dark/50">
+            <div class="layout-container flex h-full grow flex-col">
+                <div class="flex flex-1 justify-center py-16 sm:py-20 lg:py-24">
+                    <div class="layout-content-container flex flex-col w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+                        <div class="flex flex-col items-center text-center mb-12">
+                            <div class="relative mb-4">
+                                <h2
+                                    class="text-slate-900 dark:text-white text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+                                    فريقنا الطبي المتميز</h2>
+                                <div
+                                    class="absolute -top-4 -left-10 text-primary/50 text-5xl opacity-50 dark:opacity-30 transform -rotate-12">
+                                    <span class="material-symbols-outlined !text-7xl">health_and_safety</span>
+                                </div>
+                            </div>
+                            <p class="text-slate-600 dark:text-slate-400 text-lg sm:text-xl max-w-2xl">أطباء متخصصون
+                                بخبرات دولية، ملتزمون بتقديم أعلى مستويات الرعاية</p>
+                        </div>
+
+                        <!-- Team Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                            <!-- Doctor 1 -->
+                            <div class="flex flex-col gap-3 pb-3 group">
+                                <div class="w-full aspect-[3/4] relative overflow-hidden rounded-xl">
+                                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10">
+                                    </div>
+                                    <img class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd0_l781_C96brQBDmwS6cPSAGTFoOaT-VoF1BTlmITvOeC1ZxPGy1VbeOcQxsZ7Lo6jMRlrp4-rfM1kUnYl3ywcSOPMXkHs6wB4w-Rse7Q7wSWP6exRuPXLeEuPbY1SD9ohMKrK7Yg6j_DCoWTGSzSyHgg17f2h9ZwCRsNkeA7ydDceNdWSVoJHMNlZitB4RAYdzTpqhxhroBor1fvKLtoBf4EM1sXuxjfL1QKqYIoZrr9kOgNUZp3DQeLMlTooBDhOz4l7F822cT"
+                                        alt="د. أحمد محمود - استشاري زراعة الأسنان" loading="lazy" />
+                                    <div
+                                        class="absolute bottom-0 left-0 right-0 p-4 z-20 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                        <p class="text-white text-lg font-bold leading-tight">د. أحمد محمود</p>
+                                        <p class="text-primary text-sm font-medium mt-1">استشاري زراعة الأسنان</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Doctor 2 -->
+                            <div class="flex flex-col gap-3 pb-3 group">
+                                <div class="w-full aspect-[3/4] relative overflow-hidden rounded-xl">
+                                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10">
+                                    </div>
+                                    <img class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW8sOX51vW4p8KB6-Tq2vSGEeX5pUz5mGRRBJyCaLpFU_foGPvj9th_rwBblCIVlwOgswipxuOvpT8YmiBdrggjvLf8AA3zPSQohtlv8odCbhl5U2V5mPi22GN4T6bYlBk6uh23qpnjv-Yz3TTiBKT5Yt4aJDEjInkzpd4rYZteau-U0kV0F5-_kNE6dm7L53wa5GiIdEbtQHu4-_6Y2qyc9ro9BrcJPjAJbfaEyvSKmox7fJtty3D8aM_-YE-HCJZGmIjWf1VXZg"
+                                        alt="د. سارة علي - أخصائية تقويم الأسنان" loading="lazy" />
+                                    <div
+                                        class="absolute bottom-0 left-0 right-0 p-4 z-20 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                        <p class="text-white text-lg font-bold leading-tight">د. سارة علي</p>
+                                        <p class="text-primary text-sm font-medium mt-1">أخصائية تقويم الأسنان</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Doctor 3 -->
+                            <div class="flex flex-col gap-3 pb-3 group">
+                                <div class="w-full aspect-[3/4] relative overflow-hidden rounded-xl">
+                                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10">
+                                    </div>
+                                    <img class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSNEHkdONoaEy2N3bPjUmV83uFTTBjHSurajDKmCJSWckk_mk_Bxyuje7qU-ygM_sl_VQ_b1z0R0coRQ9Uf0cbK3slVtxddyBCMV68dkXNrY94LmJJHJKqo6CQoHgX-KaYpIGuvCTs3tHIOaqnKqUvUHY3uoJ6Dn0LzNGglt1O-BlvBLG2NVHnYBEFFwi4S5PYjf6TCxprQBvzCeGeeEhfJZF_93n-5Q-pL9WsMTqkfPJznJdwIV8lFC4VVkT3IkNASdR3Z08aWmk"
+                                        alt="د. فاطمة الزهراء - أخصائية طب أسنان الأطفال" loading="lazy" />
+                                    <div
+                                        class="absolute bottom-0 left-0 right-0 p-4 z-20 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                        <p class="text-white text-lg font-bold leading-tight">د. فاطمة الزهراء</p>
+                                        <p class="text-primary text-sm font-medium mt-1">أخصائية طب أسنان الأطفال</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Doctor 4 -->
+                            <div class="flex flex-col gap-3 pb-3 group">
+                                <div class="w-full aspect-[3/4] relative overflow-hidden rounded-xl">
+                                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10">
+                                    </div>
+                                    <img class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtWv4pEkE3u_K4gCXjsziEXSScWWRtcTnAqrhGKqREDx1YZda5KA0aLthVFvPxqet_c1KSet3bc4G_7_mP3hjmvF7EvlrMyfgezc6zgWy3VGCpKVPs_u0yq4H_crOp4VVN4IRSezlMEeNqW9oknPNNlT2Q9HV59B89tZAyTg2NsOHhrhu1a44h9zWYkRsPy4NB_cey7eIsrfP2OQc8pGefU06NB73TYkkfOzU-mvLQH6mn5mOwsQ0oDHWIm4OPzQU7csA0Nos0Ji0"
+                                        alt="د. عمر حسن - أخصائي علاج الجذور" loading="lazy" />
+                                    <div
+                                        class="absolute bottom-0 left-0 right-0 p-4 z-20 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                        <p class="text-white text-lg font-bold leading-tight">د. عمر حسن</p>
+                                        <p class="text-primary text-sm font-medium mt-1">أخصائي علاج الجذور</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- View All Team Button -->
+                        <div class="flex justify-center mt-12">
+                            <button onclick="document.getElementById('team-modal').classList.remove('hidden')"
+                                class="flex min-w-[180px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-xl h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] transition-transform hover:scale-105">
+                                <span class="material-symbols-outlined">group</span>
+                                <span class="truncate">تعرف على الفريق كاملاً</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-16 sm:py-20">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl md:text-4xl font-bold leading-tight tracking-tight text-text-light-primary dark:text-text-dark-primary">
+                        ماذا يقول مرضانا عنا؟</h2>
+                    <p class="mt-4 text-lg text-text-light-secondary dark:text-text-dark-secondary">آلاف المرضى السعداء
+                        يشاركون تجربتهم</p>
+                </div>
+
+                <!-- Rating Summary -->
+                <div
+                    class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-card dark:shadow-card-dark p-6 md:p-8 mb-12">
+                    <div class="flex flex-col md:flex-row flex-wrap gap-8">
+                        <div class="flex flex-col items-center md:items-start gap-2">
+                            <p
+                                class="text-5xl font-black leading-tight tracking-tighter text-text-light-primary dark:text-text-dark-primary">
+                                4.9</p>
+                            <div class="flex gap-1 text-primary">
+                                <span class="material-symbols-outlined text-xl">star</span>
+                                <span class="material-symbols-outlined text-xl">star</span>
+                                <span class="material-symbols-outlined text-xl">star</span>
+                                <span class="material-symbols-outlined text-xl">star</span>
+                                <span class="material-symbols-outlined text-xl">star_half</span>
+                            </div>
+                            <p class="text-base font-normal text-text-light-secondary dark:text-text-dark-secondary">847
+                                تقييم</p>
+                        </div>
+
+                        <!-- Rating Bars -->
+                        <div
+                            class="grid min-w-[200px] max-w-[400px] flex-1 grid-cols-[20px_1fr_40px] items-center gap-x-4 gap-y-3">
+                            <p class="text-sm font-normal">5</p>
+                            <div
+                                class="flex h-2 flex-1 overflow-hidden rounded-full bg-border-light dark:bg-border-dark">
+                                <div class="rounded-full bg-primary" style="width: 93%;"></div>
+                            </div>
+                            <p
+                                class="text-sm font-normal text-right text-text-light-secondary dark:text-text-dark-secondary">
+                                93%</p>
+
+                            <p class="text-sm font-normal">4</p>
+                            <div
+                                class="flex h-2 flex-1 overflow-hidden rounded-full bg-border-light dark:bg-border-dark">
+                                <div class="rounded-full bg-primary" style="width: 5%;"></div>
+                            </div>
+                            <p
+                                class="text-sm font-normal text-right text-text-light-secondary dark:text-text-dark-secondary">
+                                5%</p>
+
+                            <p class="text-sm font-normal">3</p>
+                            <div
+                                class="flex h-2 flex-1 overflow-hidden rounded-full bg-border-light dark:bg-border-dark">
+                                <div class="rounded-full bg-primary" style="width: 1%;"></div>
+                            </div>
+                            <p
+                                class="text-sm font-normal text-right text-text-light-secondary dark:text-text-dark-secondary">
+                                1%</p>
+
+                            <p class="text-sm font-normal">2</p>
+                            <div
+                                class="flex h-2 flex-1 overflow-hidden rounded-full bg-border-light dark:bg-border-dark">
+                                <div class="rounded-full bg-primary" style="width: 0.5%;"></div>
+                            </div>
+                            <p
+                                class="text-sm font-normal text-right text-text-light-secondary dark:text-text-dark-secondary">
+                                0.5%</p>
+
+                            <p class="text-sm font-normal">1</p>
+                            <div
+                                class="flex h-2 flex-1 overflow-hidden rounded-full bg-border-light dark:bg-border-dark">
+                                <div class="rounded-full bg-primary" style="width: 0.1%;"></div>
+                            </div>
+                            <p
+                                class="text-sm font-normal text-right text-text-light-secondary dark:text-text-dark-secondary">
+                                0.1%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Testimonial 1 -->
+                    <div
+                        class="flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-card dark:shadow-card-dark">
+                        <div class="flex items-center gap-3">
+                            <img class="w-12 h-12 rounded-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd0_l781_C96brQBDmwS6cPSAGTFoOaT-VoF1BTlmITvOeC1ZxPGy1VbeOcQxsZ7Lo6jMRlrp4-rfM1kUnYl3ywcSOPMXkHs6wB4w-Rse7Q7wSWP6exRuPXLeEuPbY1SD9ohMKrK7Yg6j_DCoWTGSzSyHgg17f2h9ZwCRsNkeA7ydDceNdWSVoJHMNlZitB4RAYdzTpqhxhroBor1fvKLtoBf4EM1sXuxjfL1QKqYIoZrr9kOgNUZp3DQeLMlTooBDhOz4l7F822cT"
+                                alt="صورة المريض أحمد السيد" loading="lazy" />
+                            <div>
+                                <p class="text-base font-bold">أحمد السيد</p>
+                                <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">مدير تنفيذي
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex gap-0.5 text-primary">
+                                <span class="material-symbols-outlined text-base">star</span>
+                                <span class="material-symbols-outlined text-base">star</span>
+                                <span class="material-symbols-outlined text-base">star</span>
+                                <span class="material-symbols-outlined text-base">star</span>
+                                <span class="material-symbols-outlined text-base">star</span>
+                            </div>
+                            <p class="text-sm font-medium">تبييض الأسنان</p>
+                        </div>
+                        <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary leading-relaxed">
+                            تجربة رائعة! كنت أعاني من اصفرار شديد والدكتور أحمد عمل لي جلسة تبييض بالليزر وكانت النتيجة
+                            مذهلة. أنصح الجميع بهذه العيادة.
+                        </p>
+                        <div
+                            class="mt-auto flex items-center justify-between text-xs text-text-light-secondary dark:text-text-dark-secondary">
+                            <span>منذ شهرين</span>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm !fill-0">verified</span>
+                                <span>مريض موثق</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div
+                        class="flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-card dark:shadow-card-dark">
+                        <div class="flex items-center gap-3">
+                            <img class="w-12 h-12 rounded-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU6DZM41WmBS4fl9kMgWajGtPtKFLmcsiryvVFcDyufOzk370Pf16UeRHUCZQaP44WNRIo699jQZQfWK901BF-WZ5h96qcUi6orvWx8dlKMgNNI-NaPNtn2gLHrVyx_Vaext4Z36vpeN6OpMa9OgRpGtaWPgZ8eYFbAutC-I0nKg-fqeujQJ4joLoLnHmZUGwtbJS7hjEpWeY31U-aESEVmSWgPb9Bp7VeIgNe6P9A0_XD0Oe1P6hc7YMLS3OhzVyriKKUypU9IqMR"
+                                alt="صورة المريض محمد حسين" loading="lazy" />
+                            <div>
+                                <p class="text-base font-bold">محمد حسين</p>
+                                <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">صاحب أعمال
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex gap-0.5 text-primary">
+                                <span class="material-symbols-outlined text-base">star</span>
+                                <span class="material-symbols-outlined text-base">star</span>
+                                <span class="material-symbols-outlined text-base">star</span>
+                                <span class="material-symbols-outlined text-base">star</span>
+                                <span class="material-symbols-outlined text-base">star</span>
+                            </div>
+                            <p class="text-sm font-medium">زراعة الأسنان</p>
+                        </div>
+                        <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary leading-relaxed">
+                            كنت خائفاً من زراعة الأسنان ولكن العملية كانت بدون أي ألم والنتيجة فوق الممتازة. الآن أستطيع
+                            أن آكل وأضحك براحة.
+                        </p>
+                        <div
+                            class="mt-auto flex items-center justify-between text-xs text-text-light-secondary dark:text-text-dark-secondary">
+                            <span>منذ 6 أشهر</span>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm !fill-0">verified</span>
+                                <span>مريض موثق</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div
+                        class="flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-card dark:shadow-card-dark">
+                        <div class="flex items-center gap-3">
+                            <img class="w-12 h-12 rounded-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLRu9zrI3lx9WtWizt0n2nJfZUwOuE_YOWg9T0S-i5916lGrtXK8uWz6ghPLnRheqWDlXY1QQzjCNpf4pnMStkyQNTzH9xloARtOXRkf_c4CPMwmwSfyYKR0CbRwrvA9JsNq2WB5vuwwpAEPwvoqkBwxoUJkazAp-1eTXEFtrp-ACb4lluIVslXaaGnJktD4v_pjrxQuzJksjoIxITndKEfm92LSv2ZFDiroqFa2XK2os082ace8FRvkk0FsfT51FQSfzvo1IeQXVL"
+                                alt="صورة المريضة فاطمة أحمد" loading="lazy" />
+                            <div>
+                                <p class="text-base font-bold">فاطمة أحمد</p>
+                                <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">أخصائية تسويق
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex gap-0.5 text-primary">
+                                <span class="material-symbols-outlined text-base">star</span>
+                                <span class="material-symbols-outlined text-base">star</span>
+                                <span class="material-symbols-outlined text-base">star</span>
+                                <span class="material-symbols-outlined text-base">star</span>
+                                <span class="material-symbols-outlined text-base">star</span>
+                            </div>
+                            <p class="text-sm font-medium">تقويم شفاف</p>
+                        </div>
+                        <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary leading-relaxed">
+                            من أفضل القرارات! التقويم غير ظاهر والنتيجة بعد سنة كانت أكثر من المتوقع. أسناني أصبحت
+                            منتظمة وابتسامتي طبيعية.
+                        </p>
+                        <div
+                            class="mt-auto flex items-center justify-between text-xs text-text-light-secondary dark:text-text-dark-secondary">
+                            <span>منذ 3 أشهر</span>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm !fill-0">verified</span>
+                                <span>مريضة موثقة</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 4-->
+                    <div
+                        class="flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-card dark:shadow-card-dark">
+                        <div class="flex items-center gap-3">
+                            <img class="w-12 h-12 rounded-full object-cover"
+                                data-alt="3D avatar of a glamorous female content creator with a perfect smile"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDLYNGvpnWqmGsr1_h4zEptjLvqNcr7FK7zLBjwagaKlnlZW9qdty_mlQTV5O0PnpD4Qn7GWUavyeLSoQn0xv8qzjCGoilFUWwtIg5VjXF1gye_SwIToHTKrLyUoBTUg8KNf_UCTjLZhaxHT-f48utVpXsrCVmS9eonqXLDU2JEN8zA2Gjpw6mIFFVJZTxs3s6jHdNLX0IaFztvzq0LKbGcQzlJCUQHvjFs4WQ_59eVCgpSb9FNgSw_qHRCmfonLfqjEAeBdMdCXDk" />
+                            <div>
+                                <p class="text-base font-bold">سارة محمد</p>
+                                <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">صانعة محتوى
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex gap-0.5 text-primary">
+                                <span class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span>
+                            </div>
+                            <p class="text-sm font-medium">ابتسامة هوليود</p>
+                        </div>
+                        <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary leading-relaxed">حلمي
+                            بابتسامة مثل
+                            المشاهير تحقق! دكتور محمد فنان. العدسات طبيعية جداً وحياتي تغيرت 180 درجة. الخدمة VIP.</p>
+                        <div
+                            class="mt-auto flex items-center justify-between text-xs text-text-light-secondary dark:text-text-dark-secondary">
+                            <span>منذ شهر</span>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm !fill-0">verified</span>
+                                <span>مريض موثوق</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 5-->
+                    <div
+                        class="flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-card dark:shadow-card-dark">
+                        <div class="flex items-center gap-3">
+                            <img class="w-12 h-12 rounded-full object-cover"
+                                data-alt="3D avatar of a friendly elderly retired teacher with a relieved expression"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ8BaHJvwlM9C-nxmrF7CnE6QtSKRJD4fwfyebj1Y0b_iB9EobKFo222TTaU3Q9nWsDMXJd-vuusef91105SHKYDzgH-mkw2L2J82VjOKCfQFJ24bJZiOn0nWDvCU0Bm6CaxZe2t0VRpzNvuJCtSyWNQpH3EkJAl84yW8KfgIf9WcfOPJNgGeLOB_Kr_96_2YOIcJUxC7bwh_f4W1sLHcSYxiKvSYwTMLHJ2_clkeODzW0yyLPnVuZv59vudopMuOJvYPr3ASSqeBP" />
+                            <div>
+                                <p class="text-base font-bold">عبدالله حسن</p>
+                                <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">معلم متقاعد
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex gap-0.5 text-primary">
+                                <span class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span>
+                            </div>
+                            <p class="text-sm font-medium">علاج جذور</p>
+                        </div>
+                        <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary leading-relaxed">كنت
+                            في ألم شديد.
+                            دكتورة ياسمين كانت صبورة جداً وعملت العلاج بدقة. الألم اختفى تماماً والضرس تم إنقاذه من
+                            الخلع. أنصح الجميع.
+                        </p>
+                        <div
+                            class="mt-auto flex items-center justify-between text-xs text-text-light-secondary dark:text-text-dark-secondary">
+                            <span>منذ أسبوعين</span>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm !fill-0">verified</span>
+                                <span>مريض موثوق</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 6-->
+                    <div
+                        class="flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-card dark:shadow-card-dark">
+                        <div class="flex items-center gap-3">
+                            <img class="w-12 h-12 rounded-full object-cover"
+                                data-alt="3D avatar of a young female graphic designer with a fresh, clean smile"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5fAw-8CL1Gb_zPJTBeNovCJFIKcH0EHzYvwA8pEfCpiNHZbrj63FkuLAIhFlz588_kmqz3UWl49Lb3eR7YrARu9Mw1owhduQMGfZo1-oh-wBRetehwUU8WKAYiE5Ay6zFu4qeWkDvfBq6uK4xNU-Cvq8HBiGJqW7rAb3CUNajxtiJHdQnaF5SbMcd1QWxDQmvx-28cVRSpnTb8xhXsmgGjMsNMrd0wX9VtMGLw2rgoveOvf_PoODgQMGFQ-l_GqYRVcjEHd7CLfS2" />
+                            <div>
+                                <p class="text-base font-bold">منى خالد</p>
+                                <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">مصممة جرافيك
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex gap-0.5 text-primary">
+                                <span class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span>
+                            </div>
+                            <p class="text-sm font-medium">تنظيف وتلميع</p>
+                        </div>
+                        <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary leading-relaxed">أزور
+                            العيادة كل 6
+                            أشهر للتنظيف. الفريق ودود جداً والتنظيف دقيق ومريح. الأسعار معقولة والجودة ممتازة. أحس أن
+                            أسناني أصح.</p>
+                        <div
+                            class="mt-auto flex items-center justify-between text-xs text-text-light-secondary dark:text-text-dark-secondary">
+                            <span>منذ 3 أيام</span>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm !fill-0">verified</span>
+                                <span>مريض منتظم</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 7-->
+                    <div
+                        class="flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-card dark:shadow-card-dark">
+                        <div class="flex items-center gap-3">
+                            <img class="w-12 h-12 rounded-full object-cover"
+                                data-alt="3D avatar of a mother with her happy child"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTouF1Ox0e2KDUiq8ME0ZhTtxki23Nd8E_erQ1a25guWJyB5ah3Un9T8DyowcdN_SYrXwsQtwQyEHXVO2oEsYelZ8TIowPxinTMdSaPHXWxkYDZAdVMptPFiqh4RCiYu_e_0voPQH6i2eXLLsIIOg15_XMiVaQ5Xeihsvih3M6KbbqkFuXG8sRvYhH6huGx2JO2_5u3JM3CMCpspoAH92KdYfBRrzC8gS7sHL_Vae7gILfLZ9gsgyZK5kHAIBaEM9vpJyqFs5zuMpL" />
+                            <div>
+                                <p class="text-base font-bold">أم ياسين</p>
+                                <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">والدة ياسين
+                                    (7 سنوات)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex gap-0.5 text-primary">
+                                <span class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span>
+                            </div>
+                            <p class="text-sm font-medium">طب أسنان أطفال</p>
+                        </div>
+                        <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary leading-relaxed">ابني
+                            كان خائفاً جداً
+                            ودكتورة منى جعلت الزيارة كلعبة! تم علاجه بدون أي خوف. الآن هو يحب الذهاب للعيادة. شكراً
+                            للفريق الرائع.</p>
+                        <div
+                            class="mt-auto flex items-center justify-between text-xs text-text-light-secondary dark:text-text-dark-secondary">
+                            <span>منذ 5 أيام</span>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm !fill-0">verified</span>
+                                <span>زيارة أولى ناجحة</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 8-->
+                    <div
+                        class="flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-card dark:shadow-card-dark">
+                        <div class="flex items-center gap-3">
+                            <img class="w-12 h-12 rounded-full object-cover"
+                                data-alt="3D avatar of a young athletic university student"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1AkOHONgkY8I295QVwJ2DRTUba_0-Ped1_gJI037Yd3RTTrjHRWQk9sZBBg7IrrXABSA5Z8p-l6kfSoVCz0k4KsZSTl0RthqQjKdI-UZ48EzuLENTd0LVQS8tI2RPWGBSMHPeUBTCy7T6egEFbtLnq6FsUQV72L1dLyoGtu7v8TWgWjgJ9Cu-2FSyi9VkT8xs4TqZx5Wgcb34Jj9F1CJbV9zgrAq7pP4LzaDYGFyZyLRyAFIao3qrF62OEbbWDfCijLOhNAdHgawd" />
+                            <div>
+                                <p class="text-base font-bold">كريم أحمد</p>
+                                <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">طالب جامعي
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex gap-0.5 text-primary">
+                                <span class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span>
+                            </div>
+                            <p class="text-sm font-medium">جراحة ضرس العقل</p>
+                        </div>
+                        <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary leading-relaxed">كان
+                            لدي ألم شديد.
+                            ذهبت للعيادة كحالة طارئة واستقبلوني فوراً. العملية كانت احترافية والألم اختفى تماماً. فريق
+                            طبي على أعلى مستوى!
+                        </p>
+                        <div
+                            class="mt-auto flex items-center justify-between text-xs text-text-light-secondary dark:text-text-dark-secondary">
+                            <span>منذ شهر</span>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm !fill-0">verified</span>
+                                <span>حالة طوارئ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 9-->
+                    <div
+                        class="flex flex-col gap-4 rounded-xl bg-surface-light dark:bg-surface-dark p-4 shadow-card dark:shadow-card-dark">
+                        <div class="flex items-center gap-3">
+                            <img class="w-12 h-12 rounded-full object-cover"
+                                data-alt="3D avatar of an elegant elderly retired lawyer with a transformed smile"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmhKgpI74G0A_jjIqTAWXEtEHMuSJjHj6zXN0nczhXYJNF78r8scoagp3rS2IPYUyJKoh_BxM6jj1hfU35Q5XELIEdmkdrxoGr9UyyHleKA0bmTtjZMylV4OqonbXRZhHASQODqewPPchn0uBQUuH6vTEJ4EkYzxRDXBvG32pYTnZNhsHWanQSfvWflRNZ28ztfRN73Xc9qGXVYPTaO6g9ITL2-F3OSbQJH96qEe20gSR_KWaB-UQi0FXphkTPVRkJpjR3MrkuCzxN" />
+                            <div>
+                                <p class="text-base font-bold">صفاء إبراهيم</p>
+                                <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">محامية
+                                    متقاعدة</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex gap-0.5 text-primary">
+                                <span class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span><span
+                                    class="material-symbols-outlined text-base">star</span>
+                            </div>
+                            <p class="text-sm font-medium">ترميم شامل</p>
+                        </div>
+                        <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary leading-relaxed">بعد
+                            سنوات من الإهمال،
+                            قررت إجراء ترميم شامل. الرحلة كانت طويلة لكن النتيجة استثنائية! عادت لي ثقتي بنفسي وأشعر أني
+                            تجددت.</p>
+                        <div
+                            class="mt-auto flex items-center justify-between text-xs text-text-light-secondary dark:text-text-dark-secondary">
+                            <span>منذ 4 أشهر</span>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm !fill-0">verified</span>
+                                <span>مريض موثوق</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View More Reviews Button -->
+                <div class="mt-12 text-center">
+                    <button onclick="document.getElementById('reviews-modal').classList.remove('hidden')"
+                        class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 mx-auto bg-primary text-text-light-primary text-base font-medium leading-normal hover:bg-primary-darker transition-colors">
+                        <span class="truncate">عرض المزيد من التقييمات</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="relative py-24 overflow-hidden">
+            <!-- Background Effects -->
+            <div
+                class="absolute inset-0 bg-gradient-to-b from-background-light to-primary/5 dark:from-background-dark dark:to-primary/10">
+            </div>
+            <div class="absolute inset-0">
+                <!-- Animated Particles -->
+                <div class="absolute inset-0" id="particles-js"></div>
+                <!-- Gradient Overlays -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark via-transparent to-transparent">
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500">
+                            تواصل معنا
+                        </span>
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+                        نحن هنا لمساعدتك. يمكنك التواصل معنا بأي من الطرق التالية
+                    </p>
+                </div>
+
+                <!-- Quick Contact Methods -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <!-- Call Card -->
+                    <a href="tel:+201012345678" class="group relative bg-white/10 dark:bg-gray-800/10 backdrop-blur-md rounded-2xl p-6
+                      hover:bg-white/20 dark:hover:bg-gray-800/20 border border-white/10 
+                      transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="relative z-10">
+                            <div class="mb-4 flex items-center gap-4">
+                                <div
+                                    class="flex items-center justify-center size-12 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                                    <span class="material-symbols-outlined text-primary text-2xl">phone</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl mb-1">اتصل بنا</h3>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">نرد على مدار اليوم</p>
+                                </div>
+                            </div>
+                            <p class="text-primary text-lg font-medium dir-ltr text-left">+20 101 234 5678</p>
+                        </div>
+                        <!-- Hover Effect -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/5 to-blue-500/5 rounded-2xl
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+
+                    <!-- WhatsApp Card -->
+                    <a href="https://wa.me/201012345678" target="_blank" class="group relative bg-white/10 dark:bg-gray-800/10 backdrop-blur-md rounded-2xl p-6
+                      hover:bg-white/20 dark:hover:bg-gray-800/20 border border-white/10 
+                      transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="relative z-10">
+                            <div class="mb-4 flex items-center gap-4">
+                                <div
+                                    class="flex items-center justify-center size-12 rounded-xl bg-green-500/10 group-hover:bg-green-500/20 transition-colors">
+                                    <svg class="size-6 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl mb-1">واتساب</h3>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">تواصل معنا مباشرة</p>
+                                </div>
+                            </div>
+                            <p class="text-green-500 text-lg font-medium">رسالة سريعة</p>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-green-500/5 to-primary/5 rounded-2xl
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+
+                    <!-- Email Card -->
+                    <a href="mailto:info@smilestudio.com" class="group relative bg-white/10 dark:bg-gray-800/10 backdrop-blur-md rounded-2xl p-6
+                      hover:bg-white/20 dark:hover:bg-gray-800/20 border border-white/10 
+                      transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="relative z-10">
+                            <div class="mb-4 flex items-center gap-4">
+                                <div
+                                    class="flex items-center justify-center size-12 rounded-xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors">
+                                    <span class="material-symbols-outlined text-blue-500 text-2xl">mail</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl mb-1">البريد الإلكتروني</h3>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">نرد خلال 24 ساعة</p>
+                                </div>
+                            </div>
+                            <p class="text-blue-500 text-lg font-medium">info@smilestudio.com</p>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-primary/5 rounded-2xl
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                </div>
+
+                <!-- Contact Form & Location -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                    <!-- Contact Form -->
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-2xl blur transition-all duration-300 group-hover:blur-xl">
+                        </div>
+                        <form data-form-type="contact"
+                            class="relative bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl p-8 rounded-2xl border border-white/20">
+                            <h3 class="text-2xl font-bold mb-6">ارسل رسالتك</h3>
+
+                            <div class="space-y-6">
+                                <!-- Name & Phone Grid -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <!-- Name Input -->
+                                    <div class="space-y-2">
+                                        <label class="text-sm font-medium">الاسم</label>
+                                        <div class="relative">
+                                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                                                <span class="material-symbols-outlined">person</span>
+                                            </span>
+                                            <input type="text" name="name" required placeholder="الاسم الكامل" class="w-full bg-white/50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 
+                                                  rounded-lg pr-10 px-4 py-3 focus:ring-2 focus:ring-primary/50 focus:border-primary/50
+                                                  placeholder-gray-400 transition-colors">
+                                        </div>
+                                    </div>
+
+                                    <!-- Phone Input -->
+                                    <div class="space-y-2">
+                                        <label class="text-sm font-medium">رقم الهاتف</label>
+                                        <div class="relative">
+                                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                                                <span class="material-symbols-outlined">phone</span>
+                                            </span>
+                                            <input type="tel" name="phone" required placeholder="01xxxxxxxxx"
+                                                pattern="[0-9]{11}" class="w-full bg-white/50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 
+                                                  rounded-lg pr-10 px-4 py-3 focus:ring-2 focus:ring-primary/50 focus:border-primary/50
+                                                  placeholder-gray-400 transition-colors dir-ltr text-right">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Email Input -->
+                                <div class="space-y-2">
+                                    <label class="text-sm font-medium">البريد الإلكتروني</label>
+                                    <div class="relative">
+                                        <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                                            <span class="material-symbols-outlined">mail</span>
+                                        </span>
+                                        <input type="email" name="email" required placeholder="email@example.com" class="w-full bg-white/50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 
+                                              rounded-lg pr-10 px-4 py-3 focus:ring-2 focus:ring-primary/50 focus:border-primary/50
+                                              placeholder-gray-400 transition-colors">
+                                    </div>
+                                </div>
+
+                                <!-- Message Input -->
+                                <div class="space-y-2">
+                                    <label class="text-sm font-medium">الرسالة</label>
+                                    <textarea name="message" rows="4" required placeholder="اكتب رسالتك هنا..." class="w-full bg-white/50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 
+                                             rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary/50 focus:border-primary/50
+                                             placeholder-gray-400 transition-colors"></textarea>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="w-full bg-gradient-to-r from-primary to-blue-500 text-white font-bold py-3 px-6 
+                                       rounded-lg flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-primary/20 
+                                       transition-all duration-300 transform hover:-translate-y-1">
+                                    <span class="material-symbols-outlined">send</span>
+                                    إرسال الرسالة
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Location & Hours -->
+                    <div class="space-y-6">
+                        <!-- Interactive Map -->
+                        <div class="relative overflow-hidden rounded-2xl h-[300px] group">
+                            <!-- Map Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-background-dark/90 z-10">
+                            </div>
+
+                            <!-- Map iframe -->
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3418.611616602038!2d31.233367!3d30.044420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAyJzM5LjkiTiAzMcKwMTQnMDAuMSJF!5e0!3m2!1sen!2seg!4v1635444289000!5m2!1sen!2seg"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                class="grayscale group-hover:grayscale-0 transition-all duration-500">
+                            </iframe>
+
+                            <!-- Location Info -->
+                            <div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="flex-shrink-0 size-12 flex items-center justify-center rounded-xl bg-primary/20">
+                                        <span class="material-symbols-outlined text-primary text-2xl">location_on</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-white text-lg">عيادة SmileStudio</h3>
+                                        <p class="text-gray-300 text-sm mt-1">123 شارع التحرير، القاهرة</p>
+                                        <a href="https://maps.google.com" target="_blank"
+                                            class="inline-flex items-center gap-1 text-primary text-sm mt-2 hover:text-primary/80 transition-colors">
+                                            <span class="material-symbols-outlined text-sm">directions</span>
+                                            احصل على الاتجاهات
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Live Location Indicator -->
+                            <div class="absolute top-4 right-4 z-20">
+                                <span class="flex h-3 w-3">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Working Hours Card -->
+                        <div
+                            class="bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl p-6 rounded-2xl border border-white/20">
+                            <!-- Header -->
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="size-12 flex items-center justify-center rounded-xl bg-primary/10">
+                                    <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-xl">ساعات العمل</h3>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">متاحين لخدمتك</p>
+                                </div>
+                            </div>
+
+                            <!-- Hours Grid -->
+                            <div class="space-y-3">
+                                <div
+                                    class="flex justify-between items-center py-2 border-b border-gray-200 dark:border-gray-700">
+                                    <span class="text-gray-600 dark:text-gray-400">السبت - الخميس</span>
+                                    <span class="text-lg font-medium">9:00 ص - 9:00 م</span>
+                                </div>
+                                <div
+                                    class="flex justify-between items-center py-2 border-b border-gray-200 dark:border-gray-700">
+                                    <span class="text-gray-600 dark:text-gray-400">الجمعة</span>
+                                    <span class="text-lg font-medium">2:00 م - 8:00 م</span>
+                                </div>
+
+                                <!-- Live Status -->
+                                <div class="flex items-center justify-between pt-2">
+                                    <div class="flex items-center gap-2">
+                                        <span class="size-2 rounded-full bg-green-500"></span>
+                                        <span class="text-sm text-gray-600 dark:text-gray-400">مفتوح الآن</span>
+                                    </div>
+                                    <span class="text-sm text-gray-500">
+                                        Updated: 2025-10-29 11:32:11
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer-Focused Footer -->
+        <footer class="relative bg-[#0a0f0f] text-white overflow-hidden">
+            <!-- Animated Background -->
+            <div class="absolute inset-0">
+                <!-- Code Pattern Background -->
+                <div class="absolute inset-0 opacity-5">
+                    <pre class="text-xs leading-4 font-mono opacity-50 overflow-hidden">
+<span class="text-blue-500">const</span> <span class="text-green-500">developer</span> = {
+    name: <span class="text-yellow-500">"Mahmoud Nazmy"</span>,
+    title: <span class="text-yellow-500">"Senior Full Stack Developer"</span>,
+    skills: [<span class="text-yellow-500">"React"</span>, <span class="text-yellow-500">"Node.js"</span>, <span class="text-yellow-500">"Python"</span>],
+    passion: <span class="text-yellow-500">"Building Amazing Web Experiences"</span>
+};</pre>
+                </div>
+                <!-- Gradient Overlays -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0f0f] via-transparent to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/5 to-blue-500/5"></div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="relative container mx-auto px-4 pt-20 pb-8">
+                <!-- Developer Profile Section -->
+                <div class="max-w-4xl mx-auto mb-16">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Developer Image -->
+                        <div class="relative mb-6 group">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-primary via-blue-500 to-purple-500 rounded-full animate-spin-slow">
+                            </div>
+                            <div class="relative p-1">
+                                <img src="https://github.com/mahmoudnazmy.png" alt="Mahmoud Nazmy"
+                                    class="w-24 h-24 rounded-full border-4 border-background-dark" />
+                            </div>
+                        </div>
+
+                        <!-- Developer Info -->
+                        <h2 class="text-3xl font-bold mb-2">Mahmoud Nazmy</h2>
+                        <p class="text-primary mb-4">Senior Full Stack Developer</p>
+                        <p class="text-gray-400 max-w-2xl mb-6">
+                            مطور ويب متخصص في بناء تجارب مستخدم استثنائية وحلول تقنية مبتكرة.
+                            خبرة +5 سنوات في تطوير تطبيقات الويب المتكاملة.
+                        </p>
+
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap justify-center gap-2 mb-8">
+                            <span
+                                class="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20">React</span>
+                            <span
+                                class="px-3 py-1 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Next.js</span>
+                            <span
+                                class="px-3 py-1 text-xs rounded-full bg-green-500/10 text-green-400 border border-green-500/20">Node.js</span>
+                            <span
+                                class="px-3 py-1 text-xs rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">JavaScript</span>
+                            <span
+                                class="px-3 py-1 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">TypeScript</span>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="flex gap-4 mb-8">
+                            <a href="https://github.com/mahmoudnazmy" target="_blank"
+                                class="group relative flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-primary/20 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                <span class="text-sm">GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mahmoud-n/" target="_blank"
+                                class="group relative flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-primary/20 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                                <span class="text-sm">LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <!-- Contact Info -->
+                    <div class="text-center">
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                            <h3 class="font-bold">تواصل معي</h3>
+                        </div>
+                        <a href="https://mahmoudnazmy.github.io/Portfolio/"
+                            class="text-gray-400 hover:text-primary transition-colors">
+                            Portfolio
+                        </a>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="text-center">
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            <h3 class="font-bold">الموقع</h3>
+                        </div>
+                        <p class="text-gray-400">الأسكندرية, مصر</p>
+                    </div>
+
+                    <!-- Availability -->
+                    <div class="text-center">
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <span class="material-symbols-outlined text-primary">schedule</span>
+                            <h3 class="font-bold">متاح للعمل</h3>
+                        </div>
+                        <p class="text-gray-400">مشاريع كاملة & استشارات</p>
+                    </div>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div class="border-t border-white/10 pt-8 text-center">
+                    <div class="flex flex-col items-center gap-4">
+                        <p class="text-sm text-gray-400">
+                            تم التطوير بواسطة
+                            <a href="https://www.linkedin.com/in/mahmoud-n/"
+                                class="text-primary hover:text-primary/80 transition-colors">
+                                Mahmoud Nazmy
+                            </a>
+                        </p>
+                        <div class="text-xs text-gray-600 flex items-center gap-2">
+                            <span>Last Updated: 2025-10-29 10:45:26 UTC</span>
+                            <span>•</span>
+                            <span>Version 2.0.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./master.js"></script>
+</body>
+
+</html>
